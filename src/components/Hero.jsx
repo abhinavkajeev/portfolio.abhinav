@@ -83,6 +83,30 @@ const Hero = () => {
       className="pt-32 pb-20 h-screen flex items-center text-white"
     >
       <div className="pl-0 md:pl-50 container mx-auto grid md:grid-cols-2 gap-8 items-center">
+        {/* Mobile Profile Image - First on Mobile */}
+        <motion.div
+          className="md:hidden flex justify-center mb-8 pt-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <div className="relative">
+            <div className="w-48 h-48 rounded-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+            <motion.div
+              className="relative z-10"
+            >
+              <img
+                src={profilePic}
+                alt="Abhinav KA Profile"
+                width={200}
+                height={200}
+                className="rounded-lg shadow-2xl animate-float"
+                priority
+              />
+            </motion.div>
+          </div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -93,7 +117,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-6xl font-bold font-heading mb-4"
+            className="text-4xl md:text-6xl font-bold font-heading mb-4 px-4 sm:px-0"
           >
             Hi, I'm <span className="yellow-500">
               {renderNeonText(name)}
@@ -103,7 +127,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-2xl md:text-3xl mb-6 text-white/80"
+            className="text-2xl md:text-3xl mb-6 text-white/80 px-4 sm:px-0"
           >
             Full Stack Developer
           </motion.h2>
@@ -111,7 +135,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.7 }}
-            className="text-lg mb-8 text-white/80 max-w-lg mx-auto md:mx-0"
+            className="text-lg mb-8 text-white/80 max-w-lg mx-auto md:mx-0 px-4 sm:px-0"
           >
             I build beautiful and responsive web applications with modern technologies.
             Let's work together to bring your ideas to life!
@@ -121,7 +145,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.9 }}
-            className="flex justify-center md:justify-start gap-4 mb-8"
+            className="flex justify-center md:justify-start gap-4 mb-8 px-4 sm:px-0"
           >
             <motion.a
               onClick={(e) => smoothScroll(e, 'projects')}
@@ -147,7 +171,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.1 }}
-            className="flex justify-center md:justify-start gap-4"
+            className="flex justify-center md:justify-start gap-4 px-4 sm:px-0"
           >
             <motion.a
               href="https://github.com/abhinavkajeev"
@@ -170,7 +194,7 @@ const Hero = () => {
               <Linkedin size={24} />
             </motion.a>
             <motion.a
-              href="www.linkedin.com/in/abhinav-ka-8a19502b2"
+              href="https://twitter.com/abhinavka"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/70 hover:text-cyan-400 transition-colors duration-300"
@@ -182,6 +206,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
         
+        {/* Desktop Profile Image */}
         <motion.div
           className="hidden md:block text-center"
           initial={{ opacity: 0, x: 50 }}
