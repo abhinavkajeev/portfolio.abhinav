@@ -28,9 +28,9 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.9 }}
             viewport={{ once: true }}
-            className="flex justify-center md:justify-start"
+            className="flex pl-5 md:justify-start"
           >
-            <div className="relative group w-104 h-104">
+            <div className="relative group w-97 h-100 ">
               <div className="w-full h-full rounded-lg bg-white/10 absolute -right-4 -bottom-4 group-hover:rotate-6 transition-transform duration-300"></div>
               <img 
                 src={profilePic}
