@@ -80,7 +80,7 @@ const Navbar = () => {
               key={link.name} 
               href={link.href} 
               onClick={(e) => handleScrollToSection(e, link.href)}
-              className="text-black dark:text-white opacity-70 hover:opacity-100 transition-all duration-300 text-lg font-medium"
+              className="text-white dark:text-white opacity-70 hover:opacity-100 transition-all duration-300 text-lg font-medium"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
