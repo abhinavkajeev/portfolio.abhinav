@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { User, Calendar, MapPin, Award } from 'lucide-react';
 import profilePic from "/sigma2.jpg";
+import resume from "/abhinav-KA.pdf";
+
 
 const About = () => {
   return (
@@ -80,7 +82,9 @@ const About = () => {
 
             <div className="flex justify-center md:justify-start">
               <motion.a
-                href="/resume.pdf"
+                href={resume}
+                
+
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-yellow-400 text-gray-900 font-bold py-3 px-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
