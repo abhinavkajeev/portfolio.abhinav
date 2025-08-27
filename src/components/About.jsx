@@ -66,7 +66,7 @@ const About = () => {
             <div className="grid grid-cols-2 gap-4 mb-8 max-w-md mx-auto md:mx-0">
               {[
                 { icon: User, text: "Abhinav KA" },
-                { icon: Calendar, text: "B-Tech 2nd year" },
+                { icon: Calendar, text: "B-Tech 3rd year" },
                 { icon: MapPin, text: "Anna Nagar" },
                 { icon: Award, text: "Available for Work" }
               ].map(({ icon: Icon, text }, index) => (
