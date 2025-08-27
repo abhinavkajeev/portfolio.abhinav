@@ -184,7 +184,7 @@ const Hero = () => {
               <Github size={24} />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/abhinav-ka-8a19502b2"
+              href="https://www.linkedin.com/in/abhinav-ka-a05ba1376/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/70 hover:yellow-500 transition-colors duration-300"
